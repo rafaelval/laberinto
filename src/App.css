@@ -1,0 +1,75 @@
+.maze-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.maze {
+  border: 3px solid black;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  /* border: 1px solid #ccc; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start {
+  background-color: #ffff00;
+}
+
+.end {
+  background-color: #ff0000;
+}
+
+.empty {
+  background-image: url(/src/images/stone-road.jpg);
+  background-size: contain;
+  
+}
+
+.wall {
+  background-image: url(/src/images/brick-wall.png);
+  background-size: contain;
+  
+}
+
+.player {
+  width: 10px;
+  height: 10px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.controls button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #3e8e41;
+}
+
+.score {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
