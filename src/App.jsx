@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import generateMaze from "./helpers/generateMaze";
 import renderMaze from "./helpers/renderMaze";
+import {
+  FaArrowUp,
+  FaArrowDown,
+  FaArrowLeft,
+  FaArrowRight,
+} from "react-icons/fa";
 import "./App.css";
 
 export const App = () => {
@@ -48,14 +54,30 @@ export const App = () => {
 
   return (
     <div className="maze-container">
-      <div className="maze">
-      {renderMaze(maze, playerPosition)}
-      </div>
+      <div className="maze">{renderMaze(maze, playerPosition)}</div>
       <div className="controls">
-        <button onClick={() => handleMove("up")}>Arriba</button>
-        <button onClick={() => handleMove("down")}>Abajo</button>
-        <button onClick={() => handleMove("left")}>Izquierda</button>
-        <button onClick={() => handleMove("right")}>Derecha</button>
+        <span onClick={() => handleMove("up")}>
+          <i>
+            <FaArrowUp />
+          </i>
+        </span>
+        <div>
+          <span onClick={() => handleMove("left")}>
+            <i>
+              <FaArrowLeft />
+            </i>
+          </span>
+          <span onClick={() => handleMove("down")}>
+            <i>
+              <FaArrowDown />
+            </i>
+          </span>
+          <span onClick={() => handleMove("right")}>
+            <i>
+              <FaArrowRight />
+            </i>
+          </span>
+        </div>
       </div>
       <div className="score">Puntaje: {score}</div>
     </div>

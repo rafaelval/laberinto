@@ -31,6 +31,9 @@ dd {
 
 /* Set core body defaults */
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
