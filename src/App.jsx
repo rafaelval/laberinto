@@ -96,6 +96,8 @@ export const App = () => {
       </div>
       <div className="contPrinc">
       <div className="maze">{renderMaze(maze, playerPosition)}</div>
+      <div className="controlsBlock">
+        <p>Puedes usar los botones o las flechas del teclado para mover tu personaje</p>
       <div className="controls">
         <span onClick={() => handleMove("up")}>
           <i>
@@ -120,6 +122,8 @@ export const App = () => {
           </span>
         </div>
       </div>
+      </div>
+      
       </div>
       
       <div className="score">Puntaje: {score}</div>
