@@ -14,10 +14,12 @@ export const App = () => {
   const [maze, setMaze] = useState([]);
   const [score, setScore] = useState(0);
   const [level, setLevel] = useState(1);
+  const [record, setRecord] = useState(0);
 
   useEffect(() => {
     const newMaze = generateMaze(level);
     setMaze(newMaze);
+    setRecord(JSON.parse(localStorage.getItem("record")) || 0);
   }, [level]);
 
   const handleMove = (direction) => {
@@ -42,7 +44,10 @@ export const App = () => {
     if (newX >= 0 && newX < maze[0].length && newY >= 0 && newY < maze.length) {
       if (maze[newY][newX] !== "W") {
         if (maze[newY][newX] === "E") {
-          setScore(score + level * 10);
+          const tempScore = score + level * 10;
+          setScore(tempScore);
+          localStorage.setItem("record", JSON.stringify(tempScore));
+          setRecord(score);
           setLevel(level + 1);
           setPlayerPosition({ x: 0, y: 0 });
         } else {
@@ -52,8 +57,38 @@ export const App = () => {
     }
   };
 
+  const handleKeyDown = (event) => {
+    switch (event.key) {
+      case "ArrowUp":
+        handleMove("up");
+        break;
+      case "ArrowDown":
+        handleMove("down");
+        break;
+      case "ArrowLeft":
+        handleMove("left");
+        break;
+      case "ArrowRight":
+        handleMove("right");
+        break;
+      default:
+        break;
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    }; // eslint-disable-next-line
+  }, [handleMove]);
+
   return (
     <div className="maze-container">
+      <div>
+        <p>Puntaje mas alto: {record}</p>
+        <button>Reiniciar Puntaje</button>
+      </div>
       <div className="maze">{renderMaze(maze, playerPosition)}</div>
       <div className="controls">
         <span onClick={() => handleMove("up")}>
