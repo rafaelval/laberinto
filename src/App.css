@@ -54,8 +54,16 @@
 }
 
 .record {
-  margin-top: 25px;
+  margin-top: 10px;
   margin-bottom: 25px;
+}
+
+.contPrinc {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .controls {
@@ -63,7 +71,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  
 }
 
 span {
@@ -125,5 +133,11 @@ span:hover {
   .cell {
     width: 15px;
     height: 15px;
+  }
+  .contPrinc{
+    flex-direction: column;
+  }
+  .controls{
+    margin-top: 20px;
   }
 }

@@ -94,6 +94,7 @@ export const App = () => {
         <p>Puntaje mas alto: {record}</p>
         <button onClick={handleReset}>Borrar record</button>
       </div>
+      <div className="contPrinc">
       <div className="maze">{renderMaze(maze, playerPosition)}</div>
       <div className="controls">
         <span onClick={() => handleMove("up")}>
@@ -119,6 +120,8 @@ export const App = () => {
           </span>
         </div>
       </div>
+      </div>
+      
       <div className="score">Puntaje: {score}</div>
     </div>
   );
