@@ -76,6 +76,11 @@ export const App = () => {
     }
   };
 
+  const handleReset = ()=>{
+    localStorage.setItem("record", JSON.stringify(0))
+    setRecord(0)
+  }
+
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
     return () => {
@@ -85,9 +90,9 @@ export const App = () => {
 
   return (
     <div className="maze-container">
-      <div>
+      <div className="record">
         <p>Puntaje mas alto: {record}</p>
-        <button>Reiniciar Puntaje</button>
+        <button onClick={handleReset}>Borrar record</button>
       </div>
       <div className="maze">{renderMaze(maze, playerPosition)}</div>
       <div className="controls">
