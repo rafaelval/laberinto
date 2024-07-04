@@ -3,12 +3,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
   min-height: 100vh;
 }
 
 .maze {
   border: 3px solid black;
+  background-color: #232323;
 }
 
 .row {
@@ -55,6 +55,7 @@
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 10px;
   margin-bottom: 25px;
+  font-weight: bold;
 }
 
 .record p{
@@ -71,6 +72,7 @@
 }
 
 .controlsBlock {
+  width: 30%;
   display: flex;
   flex-direction: column;
   padding: 25px;
@@ -80,6 +82,7 @@
   margin-bottom: 25px;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
 }
 
 .controls {
