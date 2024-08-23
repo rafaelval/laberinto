@@ -37,6 +37,8 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
+  background-image: url(/src/images/forest.jpg);
+  background-size: contain;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */

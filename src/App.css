@@ -58,12 +58,16 @@
   font-weight: bold;
 }
 
+p{
+  color: #c9c93e;
+}
+
 .record p{
   padding-bottom: 5px;
 }
 
 .contPrinc {
-  width: 100vw;
+  width: 90vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
