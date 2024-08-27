@@ -1,6 +1,6 @@
 const generateMaze = () => {
-      const width = 24;
-      const height = 24;
+      const width = 18;
+      const height = 18;
       const newMaze = Array.from({ length: height }, () => Array.from({ length: width }, () => 'W'));
     
       // Create a path from start to end using Recursive Backtracker algorithm

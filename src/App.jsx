@@ -127,7 +127,10 @@ export const App = () => {
       </div>
       
       <div className="score">Puntaje: {score}</div>
-      <footer><a href="https://www.freepik.es/vector-gratis/escena-madera-hermosa-naturaleza_4228047.htm#query=fondo%20bosque%20animado&position=3&from_view=keyword&track=ais_hybrid&uuid=6184151e-1e71-40ba-86fb-cd8c6aba78d0">Imagen de brgfx</a> en Freepik</footer>
+      <footer>
+        <div><a href="https://www.freepik.es/vector-gratis/escena-madera-hermosa-naturaleza_4228047.htm#query=fondo%20bosque%20animado&position=3&from_view=keyword&track=ais_hybrid&uuid=6184151e-1e71-40ba-86fb-cd8c6aba78d0">Imagen de brgfx</a> en Freepik</div>
+  <p className="copy">Rafael Valbuena-2024 &copy; todos los derechos reservados</p>
+  </footer>
     </div>
   );
 };
