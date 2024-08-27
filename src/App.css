@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  
 }
 
 .maze {
@@ -60,6 +60,7 @@
 
 p{
   color: #c9c93e;
+  
 }
 
 .copy {
@@ -68,6 +69,7 @@ p{
 
 .record p{
   padding-bottom: 5px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .contPrinc {
@@ -91,6 +93,7 @@ p{
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: large;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .controls {
@@ -166,7 +169,7 @@ footer{
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: grey;
+  background-color: rgba(128, 128, 128, 0.405);
   font-size: 0.8em;
 }
 
@@ -225,8 +228,32 @@ footer{
    top: -100px;
   }
   .controlsBlock p{
-    top: 100px;
+    top: 80px;
     width: 80vw;
     left: -180px;
+  }
+  .score{
+    margin-top: -70px;
+    margin-bottom: 150px;
+  }
+
+  footer{
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .cell{
+    width: 15px;
+  height: 15px;
+  }
+  .controls{
+    left: -170px;
+  }
+  .controlsBlock p{
+    top: 100px;
+    width: 80vw;
+    left: -150px;
   }
 }
